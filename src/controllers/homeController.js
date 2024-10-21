@@ -12,8 +12,14 @@ const getHoiDanIt = (req, res) => {
   // res.send("<h1>hoi dan it voi dang phuong linh</h1>");
   res.render("sample.ejs");
 };
+
+const postCreateUser = (req, res) => {
+  console.log("req.body: ", req.body);
+  res.send("create a new user");
+};
 module.exports = {
   getHomePage,
   getABC,
   getHoiDanIt,
+  postCreateUser,
 };

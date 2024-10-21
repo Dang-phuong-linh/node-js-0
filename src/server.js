@@ -10,6 +10,10 @@ const app = express(); //app express
 const port = process.env.PORT || 8888; //hard code
 const hostname = process.env.HOST_NAME;
 
+//config req.body, lay data tu phia client gui len
+app.use(express.json()); //for json
+app.use(express.urlencoded({ extended: true })); //for form data
+
 //config template engine
 configViewEngine(app);
 
